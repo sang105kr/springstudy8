@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+ 'use strict';
+ 
+  const $save = document.getElementById('save');
+ const $name = document.getElementById('name');
+ const $hackbun = document.getElementById('hackbun');
+
+ $save.addEventListener('click', handler, false);
+ 
+ function handler(evt){
+   console.log('클릭!');
+   if(!window.sessionStorage) {
+     alert('세션 스토리지를 지원하지 않는 브라우저 입니다.');
+     return;
+   }
+   if($name.value.rim().length == 0){
+     alert('이름을 입력하세요!');
+     return;
+   } 
+   window.sessionStorage.setItem($name.value,$hackbun.value);
+ }

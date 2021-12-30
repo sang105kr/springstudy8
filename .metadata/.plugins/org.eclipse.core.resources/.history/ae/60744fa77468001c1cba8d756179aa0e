@@ -1,0 +1,12 @@
+@charset "UTF-8";
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+#errmsg {
+	font-size : 0.825em;
+	font-weight : bold;
+	color : #f00;
+	
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이름과 학번 입력</title>
+	<!-- 절대경로 -->
+	<link rel="stylesheet" href="/practice12/css/1.css" />
+	<!-- 상대경로 -->
+	<!--   <link rel="stylesheet" href="./css/1.css" /> -->
+	<script defer src="/practice12/js/1_2.js"></script>
+</head>
+<body>
+	<h3>이름으로 학번검색</h3>
+	<hr />
+	<form action="#">
+		<ul>
+			<li>
+				<label for="name">검색할 이름</label> 
+				<input type="text" name="name" id="name" />
+			</li>
+			<li>
+				<label for="hackbun">검색된 학번</label>
+				<input type="text" name="hackbun" id="hackbun" />
+				<button type="button" id="search">스토리지에서 검색</button>
+			</li>
+		</ul>
+		<div id='errmsg'></div>
+		<p>
+			<a href="1.html">이름으로 학번 저장 페이지로</a>
+		</p>
+	</form>
+	<div id='listAll'></div>
+	<script>
+		let tagStr = `<table border='1'>
+										<thead>
+											<tr>
+												<th>이름</th>
+												<th>학번</th>
+											</tr>
+										</thead>
+										<tbody>`;
+		
+		const itemCnt = window.sessionStorage.length;										
+		for(let i=0; i<itemCnt; i++ ){
+			const key = sessionStorage.key(i);
+			const value = sessionStorage.getItem(key);
+			
+			tagStr +=	`<tr>
+							  <td>${key}</td>
+							  <td>${value}</td>
+						   </tr>`;
+		}
+				
+				
+		tagStr += `	</tbody>
+									</table>`;
+	</script>
+	
+</body>
+</html>

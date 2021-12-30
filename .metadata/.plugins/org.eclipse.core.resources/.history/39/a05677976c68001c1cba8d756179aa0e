@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+ 'use strict';
+ 
+ 
+ const $save = document.getElementById('save');
+ const $name = document.getElementById('name');
+ const $hackbun = document.getElementById('hackbun');
+
+ $save.addEventListener('click', handler, false);
+ 
+ function handler(evt){
+   console.log('클릭!');
+   window.sessionStorage.setItem('name',$name.value);
+   window.sessionStorage.setItem('hackbun',$hackbun.value);
+ }

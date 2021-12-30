@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>이름과 학번 입력</title>
+	<!-- 절대경로 -->
+	<link rel="stylesheet" href="/practice12/css/1.css" />
+	<!-- 상대경로 -->
+	<!--   <link rel="stylesheet" href="./css/1.css" /> -->
+	<script defer src="/practice12/js/1.js"></script>
+</head>
+<body>
+	<h3>이름과 학번 입력</h3>
+	<hr />
+	<form action="">
+		<ul>
+			<li>
+				<label for="name">이름</label> 
+				<input type="text" name="name" id="name" />
+			</li>
+			<li>
+				<label for="hackbun">학번</label>
+				<input type="text" name="hackbun" id="hackbun" />
+				<button id="save">스토리지에 저장</button>
+			</li>
+		</ul>
+		<p>
+			<a href="1-2.html">이름으로 학번 검색 페이지로</a>
+		</p>
+	</form>
+</body>
+</html>
